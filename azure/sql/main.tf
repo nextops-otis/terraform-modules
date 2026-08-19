@@ -5,6 +5,7 @@ module "kv" {
   resource_group_name = var.resource_group_name
   location            = var.location
   environment         = var.environment
+  ticket              = var.ticket
 }
 
 resource "random_password" "sql_admin" {
