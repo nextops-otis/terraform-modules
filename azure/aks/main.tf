@@ -32,7 +32,7 @@ resource "azurerm_kubernetes_cluster" "aks" {
 }
 
 data "azurerm_container_registry" "acr" {
-  name                = "nextopsacrdemo"
+  name                = "nextopsacrpilot"
   resource_group_name = "RG-NEXTOPS-POC-GLOBAL-001"
 }
 
