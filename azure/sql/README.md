@@ -1,6 +1,8 @@
 # SQL Module
 
-Creates Azure SQL Server and Database.
+Creates an Azure SQL Server and Database, with a firewall rule allowing Azure
+services and resources (including AKS) to connect. Does not create its own
+Key Vault - the admin password is a plain input variable with a default.
 
 ## Usage
 
@@ -13,6 +15,6 @@ module "sql" {
   resource_group_name    = module.rg.name
   location               = "eastus"
 
-  administrator_password = var.sql_admin_password
+  sql_admin_password     = "NexTOps@312" # optional - this is the default
   environment            = "dev"
 }

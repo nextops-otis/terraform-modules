@@ -21,3 +21,8 @@ variable "environment" {
 variable "ticket" {
   type = string
 }
+
+variable "sql_admin_password" {
+  type    = string
+  default = "NexTOps@312"
+}
